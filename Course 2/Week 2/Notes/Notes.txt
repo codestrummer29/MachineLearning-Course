@@ -1,0 +1,39 @@
+Linear Regression : 
+Parameter must be linear although features can be non linear
+
+Polynomial Regression :
+
+yi = w0 + w1xi + w2xi2 + .... + Ei
+x = features
+w = parameter (intercept)
+
+
+Seasonal Models : 
+yi = w0 + w1ti + w2sin(2(Pie)ti / 12  - (phi)) + Ei
+
+using sin(A-B),
+
+Equivalent seasonal equation = (not literally using phi term)
+
+yi = w0 + w1ti + w2sin(2(Pie)ti / 12) - w3cos(2(Pie)ti / 12)  + Ei
+
+
+In polynomian regression, the coefficient cannot be interpretted unless everything else can be held constant.
+
+Matrices and Vector operations 
+
+https://tutorial.math.lamar.edu/Classes/DE/LA_Matrix.aspx
+
+
+
+Least sqaures D-dimentional curve
+Computing the gradient :
+Rss = 0
+-2Ht(y - Hw) = 0
+w = (HtH)^-1 * Ht*y
+
+
+Complexity of Ht*H = O(D^2N)
+Complexity of inverse(Ht*H) = O(D^3)
+Total complexity = O(D^2N + D^3)
+
