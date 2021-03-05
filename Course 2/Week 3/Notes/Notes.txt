@@ -1,0 +1,58 @@
+Assessing performance
+
+LOSS : 
+
+perfect predictions, loss = 0
+
+Loss function = cost incurred while making estimated prediction over true prediction
+
+Example:
+Symmetric loss function
+Assuming loss for underpricing = overpricing
+Using absolute Error
+
+
+
+Training Error :
+
+• Avg loss on training points (On loss function for each prediction)
+
+• Root mean squared error = RMSE = squared root of training error
+
+
+Training error vs model complexity :
+• Goes down till it becomes insignificant - sometimes leads to overfitting
+-> Training error is not a good metric to measure predictive performance
+
+Generalisation error/ true error : 
+
+• Average value of loss weighted by how likely those pairs(estimated,true) were present in our dataset
+Generalisation error vs model complexity :
+• Goes down until model becomes more complex and then error starts increasing
+• Not computable
+
+
+Test error : 
+• Good measure for predictive performance
+• Assuming as a proxy for everything else or every other data
+• Avg loss for house in test set
+
+Test error vs model complexity :
+• Performs similar to generalisation error (similar noise)
+
+Overfitting:
+• Training error at a point(higher complex model) is less than training error at another point(less complex model)
+but true error at that point(higher complex) is greater than true error at another point(less complex)
+
+
+
+Sources of error + Bias variance tradeoff
+1. Noise        - the epsilon(Ei) error - irreducable error
+2. Bias         - difference between average fit and true function
+3. Variance     - range of the epsilon error/ difference between differenct fits(of diff data sets)/ how much does the fits vary
+
+
+High complex models have high variance. But they will have low bias
+
+Bias and variance are like inversely proportinal
+MSE = bias^2 + variance
