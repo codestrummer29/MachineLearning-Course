@@ -1,0 +1,49 @@
+Overfitting Models ->\
+
+Balancing bias and variance - ridge regression
+
+• Overfitting more scene in complex models and not specific to polynomial regression
+• Few observations can lead to overfitting
+• Huge number of observations + complex models = Still difficult to overfit
+• Few features require more observations to avoid overfitting (Hard to avoid overfit)
+• More features and even more observations (Even harder to avoid overfitting)
+
+
+Initially we only looked on RSS (predicted price - actual price)^2 to reduce cost
+
+Ridge Objective : 
+To balance between 2 things - >
+• Fit of the model
+• Magnitude of the coefficients
+
+
+Total cost = measure of fit + measure of magnitude of coefficients 
+small values means better cost for both the things
+
+Initially we only improved measure of fit by RSS
+
+
+Measure of magnitude of coefficients : 
+
+Sum of coefficients - not good + and - will give small value
+Absolute of coefficients - decently good - L1 norm
+Sum of Square of coefficients - pretty good - L2 norm
+
+Resulting objective = 
+Minimize RSS and (lambda)L2 together . 
+Here lambda = tuning parameter. Balance of fit and magnitude
+
+This process is known as ridge regression or L2 regularization
+
+• Large lambda 
+high bias - low variance 
+
+• Small lambda 
+low bias - high variance
+
+Indirectly - lambda controls model complexity
+
+
+Optimizing the ridge : 
+Ridge closed form solution
+Ridge gradient descent
